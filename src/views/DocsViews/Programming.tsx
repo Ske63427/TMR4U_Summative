@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 function Programming(){
     const styles = {
@@ -32,29 +32,49 @@ function Programming(){
             <div>
                 <ul style={styles.list}>
                     <li style={{...styles.listItem, ...styles.indent1}}>Firmware</li>
-                    <li style={{...styles.listItem, ...styles.indent2}}><Link style={{textDecoration: "none", color: "white"}} to={'/docs/programming/gyronavx'}>Gyro(NavX)</Link></li>
-                    <li style={{...styles.listItem, ...styles.indent2}}><Link to={'/docs/programming/radio'}>Radio</Link></li>
+                    <li style={{...styles.listItem, ...styles.indent2}}>
+                        <Link
+                            style={{textDecoration: "none", color: "white"}}
+                            to={'/docs/programming/gyro-navx'}
+                        >Gyro(NavX)</Link>
+                    </li>
+                    <li style={{...styles.listItem, ...styles.indent2}}>
+                        <Link
+                            style={{textDecoration: "none", color: "white"}}
+                            to={'/docs/programming/radio'}
+                        >Radio</Link>
+                    </li>
                     <li style={{...styles.listItem, ...styles.indent1}}>Control Algorithms</li>
-                    <li style={{...styles.listItem, ...styles.indent2}}><Link>Bang-Bang</Link></li>
-                    <li style={{...styles.listItem, ...styles.indent2}}><Link>P.I.D</Link></li>
+                    <li style={{...styles.listItem, ...styles.indent2}}>
+                        <Link
+                            style={{textDecoration: "none", color: "white"}}
+                            to={'/docs/programming/bangbang'}
+                        >Bang-Bang</Link>
+                    </li>
+                    <li style={{...styles.listItem, ...styles.indent2}}>
+                        <Link
+                            style={{textDecoration: "none", color: "white"}}
+                            to={'/docs/programming/pid'}
+                        >P.I.D</Link>
+                    </li>
                     <li style={{...styles.listItem, ...styles.indent1}}>Generic Wrappers</li>
-                    <li style={{...styles.listItem, ...styles.indent2}}><Link>Joystick</Link></li>
-                    <li style={{...styles.listItem, ...styles.indent2}}><Link>Motor Controller</Link></li>
+                    <li style={{...styles.listItem, ...styles.indent2}}>
+                        <Link
+                            style={{textDecoration: "none", color: "white"}}
+                            to={'/docs/programming/joystick'}
+                        >Joystick</Link>
+                    </li>
+                    <li style={{...styles.listItem, ...styles.indent2}}>
+                        <Link
+                            style={{textDecoration: "none", color: "white"}}
+                            to={'/docs/programming/motor-controller'}
+                        >Motor Controller</Link>
+                    </li>
                 </ul>
             </div>
             <hr style={{width: '10px', height: '500px', margin: '0 auto', marginLeft: '10px', color: "white"}}/>
-            <div>
-                <p style={{marginLeft: "25px"}}>
-                    This team is responsible for designing and maintaining the software that runs on the robot. This can include
-                    the robot's control system, autonomous routines, computer vision, and more. The programming team is also
-                    generally responsible for updating and flashing any related firmware, such as on the RoboRIO, radio, and
-                    motor controllers. The programming team works closely with both the electrical and design teams to ensure
-                    the seamless integration of software with the robot's electrical components and mechanical structure. General
-                    programming knowledge, and skills in Java, systems design, control algorithms, version control, and
-                    troubleshooting are of great benefit.<br/>
-                    Additional responsibilities may also include GitHub & Discord administration, documentation,
-                    scouting software, data analysis, and more.
-                </p>
+            <div style={{marginLeft: "50px"}}>
+                <Outlet/>
             </div>
         </div>
     )

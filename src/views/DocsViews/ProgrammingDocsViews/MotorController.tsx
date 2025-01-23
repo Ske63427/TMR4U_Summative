@@ -1,7 +1,10 @@
 function MotorController(){
     return(
-        <div></div>
+        <div>
+            <h1>Work In Progress</h1>
+        </div>
     )
 }
 
 export default MotorController;
+

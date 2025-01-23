@@ -6,8 +6,13 @@ import Design from '../src/views/DocsViews/Design.tsx'
 import Electronics from '../src/views/DocsViews/Electronics.tsx'
 import Manufacturing from '../src/views/DocsViews/Manufacturing.tsx'
 import Programming from '../src/views/DocsViews/Programming.tsx'
+import ProgrammingOverview from "../src/views/DocsViews/ProgrammingDocsViews/ProgrammingOverview.tsx"
 import GyroNavX from "../src/views/DocsViews/ProgrammingDocsViews/GyroNavX.tsx"
 import Radio from "../src/views/DocsViews/ProgrammingDocsViews/Radio.tsx"
+import BangBang from "../src/views/DocsViews/ProgrammingDocsViews/BangBang.tsx"
+import PID from "../src/views/DocsViews/ProgrammingDocsViews/PID.tsx"
+import Joystick from "../src/views/DocsViews/ProgrammingDocsViews/Joystick.tsx"
+import MotorController from "../src/views/DocsViews/ProgrammingDocsViews/MotorController.tsx"
 import InventoryView from '../src/views/InventoryView.tsx';
 import Bolts from '../src/views/InventoryViews/Bolts.tsx';
 import Nuts from '../src/views/InventoryViews/Nuts.tsx';
@@ -29,8 +34,13 @@ function App() {
                     <Route path="manufacturing" element={<Manufacturing/>}/>
                     <Route path="electronics" element={<Electronics/>}/>
                     <Route path="programming" element={<Programming/>}>
+                        <Route path="" element={<ProgrammingOverview/>}/>
                         <Route path="gyro-navx" element={<GyroNavX/>}/>
                         <Route path="radio" element={<Radio/>}/>
+                        <Route path="bangbang" element={<BangBang/>}/>
+                        <Route path="pid" element={<PID/>}/>
+                        <Route path="joystick" element={<Joystick/>}/>
+                        <Route path="motor-controller" element={<MotorController/>}/>
                     </Route>
                     <Route path="business" element={<Business/>}/>
                 </Route>
